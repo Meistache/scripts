@@ -1,0 +1,15 @@
+# config file for create_hosts.rb,
+# place it in /etc/libvirt/create_host.yaml
+---
+ostype: "linux"
+codename: "jessie"
+accelerate:  true
+graphics:  "none"
+domain: "example.org"
+url: "http://1.2.3.4/default.txt"
+disksize: 20
+noop: false
+nameserver: "1.2.3.4"
+pool: "default"
+ram: 4096
+bridge: "virbr0"
