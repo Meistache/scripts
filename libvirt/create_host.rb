@@ -22,7 +22,12 @@ class OptParseVirtInstall
     fileread = File.read $conffile
     options = OpenStruct.new(YAML::load fileread)
 
-    options.osvariant ="debian#{options.codename}"
+
+    # use virt-install --os-variant list
+    # to show available options
+    # for wheezy *and upwards*, "debianwheezy" must
+    # be specified
+    options.osvariant ="debianwheezy"
 
     optparse = OptionParser.new do|opts|
       opts.banner = "Usage: create_host.rb -H HOSTNAME -i IP -g GATEWAY -n NETMASK [...]"
