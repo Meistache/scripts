@@ -47,8 +47,8 @@ openssh-server  openssh-server/permit-root-login  boolean true
 
 d-i grub-installer/only_debian boolean true
 d-i grub-installer/with_other_os boolean false
-grub-pc	grub2/linux_cmdlinei  string	console=tty0 console=ttyS0,115200n8
-grub-pc	grub-pc/install_devices	multiselect	/dev/vda
+grub-pc grub2/linux_cmdline string console=tty0 console=ttyS0,115200n8
+grub-pc grub-pc/install_devices multiselect /dev/vda
 
 d-i finish-install/reboot_in_progress note
 popularity-contest popularity-contest/participate boolean false
